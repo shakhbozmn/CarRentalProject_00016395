@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "8wX2zZZU7g1lCeumzqJjLxBE3AW2WymKnQS2FGgPiXv6I33FhcBISEZtW9x6Otmh3zs/BrVE+ad0v3lsUI0jFw==",
+  "success": true,
+  "projectFilePath": "/Users/shakhboz/university docs/WEB_DEV/CarRentalSystem_00016395/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj",
+  "expectedPackageFiles": [
+    "/Users/shakhboz/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/shakhboz/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/shakhboz/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/shakhboz/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/shakhboz/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/shakhboz/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
