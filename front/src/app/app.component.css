@@ -1,0 +1,47 @@
+.cr-nav {
+  padding: 40px 20px;
+  position: relative;
+}
+.cr-nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 2px;
+  background: #000;
+}
+.cr-nav .brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+}
+.cr-nav .brand svg {
+  width: 34px;
+  height: 34px;
+}
+.cr-nav .btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background: none;
+  border: 0px;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+.cr-nav .btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+.cr-nav .btn:hover::after {
+  width: 100%;
+}/*# sourceMappingURL=app.component.css.map */

@@ -5,14 +5,12 @@ using Microsoft.EntityFrameworkCore;
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            // Allow specific origins (Angular frontend)
-            policy.WithOrigins("http://localhost:4200") // Frontend URL
+            policy.WithOrigins("http://localhost:4200")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
@@ -22,18 +20,15 @@ builder.Services.AddCors(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Register services and repositories
 builder.Services.AddScoped<ICar16395Repository, Car16395Repository>();
 builder.Services.AddScoped<IRental16395Repository, Rental16395Repository>();
 builder.Services.AddControllers();
 
-// Configure database context
 builder.Services.AddDbContext<CRDbContext_16395>(o =>
     o.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
 
 var app = builder.Build();
 
-// Enable Swagger in development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -42,12 +37,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Enable CORS
 app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 
-// Map controllers
 app.MapControllers();
 
 app.Run();

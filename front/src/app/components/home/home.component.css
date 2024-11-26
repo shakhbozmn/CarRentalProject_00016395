@@ -1,0 +1,96 @@
+@keyframes flyAway {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(30px, -30px);
+    opacity: 0;
+  }
+}
+@keyframes reappear {
+  0% {
+    transform: translate(-30px, 30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+.home-wrapper {
+  height: calc(100vh - 170px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-wrapper h1 {
+  font-size: clamp(3rem, 5vw, 10rem);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+.home-wrapper p {
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 50px 0;
+}
+.home-wrapper .btn {
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-self: center;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.home-wrapper .btn .text {
+  padding: 17px 35px;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 100px;
+}
+.home-wrapper .btn .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 100px;
+}
+.home-wrapper .btn .arrow svg {
+  animation: none;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.home-wrapper .btn:hover .arrow svg {
+  animation: flyAway 0.5s forwards, reappear 0.8s 0.5s forwards;
+  animation-fill-mode: forwards;
+}
+.home-wrapper .btn:active {
+  background-color: transparent;
+  opacity: 0.4;
+}
+.home-wrapper .btn:active .arrow svg {
+  animation: flyAway 0.5s forwards, reappear 0.8s 0.5s forwards;
+}
+.home-wrapper .main-img {
+  max-width: 100%;
+  border-radius: 60px;
+}/*# sourceMappingURL=home.component.css.map */
