@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KJUH9LsLPcxfeAsyqqa3YvMadKtYM4WiYS10PpasU/8p6qj9r/mB5URy8RSaofYN2BIr7oAKR8V845qM4o1u5A==",
+  "dgSpecHash": "oPcvNYZWGOQ=",
   "success": true,
-  "projectFilePath": "/Users/shakhboz/university docs/WEB_DEV/CarRentalSystem_00016395/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj",
+  "projectFilePath": "/Users/shakhboz/university docs/CarRentalProject_00016395/back/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj",
   "expectedPackageFiles": [
     "/Users/shakhboz/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/shakhboz/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

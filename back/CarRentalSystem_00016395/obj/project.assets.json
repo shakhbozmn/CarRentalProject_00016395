@@ -2487,12 +2487,13 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shakhboz/university docs/WEB_DEV/CarRentalSystem_00016395/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj",
+      "projectUniqueName": "/Users/shakhboz/university docs/CarRentalProject_00016395/back/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj",
       "projectName": "CarRentalSystem_00016395",
-      "projectPath": "/Users/shakhboz/university docs/WEB_DEV/CarRentalSystem_00016395/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj",
+      "projectPath": "/Users/shakhboz/university docs/CarRentalProject_00016395/back/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj",
       "packagesPath": "/Users/shakhboz/.nuget/packages/",
-      "outputPath": "/Users/shakhboz/university docs/WEB_DEV/CarRentalSystem_00016395/CarRentalSystem_00016395/obj/",
+      "outputPath": "/Users/shakhboz/university docs/CarRentalProject_00016395/back/CarRentalSystem_00016395/obj/",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/Users/shakhboz/.nuget/NuGet/NuGet.Config"
       ],

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="663c1e7f-8606-4dc4-9379-d30e5b8aa6be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem_00016395/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem_00016395/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem_00016395/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem_00016395/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/.global.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/.idea/.idea.CarRentalSystem_00016395.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/.idea/.idea.CarRentalSystem_00016395.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/.idea/.idea.CarRentalSystem_00016395.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/.idea/.idea.CarRentalSystem_00016395.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/CarRentalSystem_00016395.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Data/CRDbContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Data/Migrations/20241125200658_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Data/Migrations/20241125200658_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Data/Migrations/CRDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Models/Car.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Models/Customer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Models/Rental.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/.global.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/CarRentalSystem_00016395" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/CarRentalSystem_00016395.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/CarRentalSystem_00016395.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/CarRentalSystem_00016395.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/CarRentalSystem_00016395.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Humanizer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Identity.Client.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.OpenApi.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Security.Permissions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/CarRentalSystem_00016395.csproj.EntityFrameworkCore.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/CarRentalSystem_00016395.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/CarRentalSystem_00016395.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/CarRentalSystem_00016395.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/CarRentalSystem_00016395.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/apphost" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/ref/CarRentalSystem_00016395.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/refint/CarRentalSystem_00016395.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem_00016395/obj/staticwebassets.pack.sentinel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "shakhbozmn"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:shakhbozmn/CarRentalProject_00016395.git",
+    "accountId": "b97a0a08-c6ad-4739-96de-1a4ecfa6675f"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/back/CarRentalSystem_00016395/Program.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2pNK5YgyKDlwOstBVHDp5HusQz4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/shakhboz/university docs/CarRentalProject_00016395",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="663c1e7f-8606-4dc4-9379-d30e5b8aa6be" name="Changes" comment="" />
+      <created>1732600910635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732600910635</updated>
+      <workItem from="1732600911691" duration="75000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
