@@ -12,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICar16395Repository, Car16395Repository>();
+builder.Services.AddScoped<IRental16395Repository, Rental16395Repository>();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<CRDbContext_16395>(o =>
     o.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
