@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Available Cars</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Rental Price (per day)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let car of cars">
+                <td>{{ car.model }}</td>
+                <td>{{ car.year }}</td>
+                <td>{{ car.rentalPricePerDay }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
