@@ -21,4 +21,8 @@ export class CarListComponent {
       this.cars = data;
     });
   }
+
+  EditCar(id: number) {
+    this.router.navigate(['/edit-car', id]);
+  }
 }

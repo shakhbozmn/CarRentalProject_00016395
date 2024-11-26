@@ -1,0 +1,8 @@
+Project 'CarRentalSystem_00016395' has the following package references
+   [net6.0]: 
+   Top-level Package                              Requested   Resolved
+   > Microsoft.EntityFrameworkCore                6.0.36      6.0.36  
+   > Microsoft.EntityFrameworkCore.SqlServer      6.0.36      6.0.36  
+   > Microsoft.EntityFrameworkCore.Tools          6.0.36      6.0.36  
+   > Swashbuckle.AspNetCore                       6.9.0       6.9.0   
+

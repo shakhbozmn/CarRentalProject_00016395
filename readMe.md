@@ -38,6 +38,19 @@ The backend uses **ASP.Net Core** and follows a standard .NET solution structure
 
 The frontend is built with **Angular** and organized to manage client-side behavior:
 
-- **Source (`src`)**: The main source code for the Angular application, containing components, services, and modules.
+- **Source (`src`)**: The main source code for the Angular application, containing components, services, types and other dependency files
 - **Public Assets**: Houses static files like images, fonts, and other assets.
 - **Configuration**: Contains configuration files for Angular, Tailwind CSS, and TypeScript.
+
+## Reference
+
+### Packages and Libraries Used
+
+Below are the packages that have been utilized for the CarRentalSystem_00016395 backend, along with their purpose:
+
+#### Backend (ASP.NET Core)
+
+1. **Microsoft.EntityFrameworkCore** - ORM for interacting with the database using the code-first approach.
+2. **Swashbuckle.AspNetCore** - Enables Swagger/OpenAPI documentation for the ASP.NET Core API.
+3. **Microsoft.EntityFrameworkCore.Tools** - Used for migratons adn database management.
+4. **Microsoft.EntityFrameworkCore.SqlServer** - Utilized for supporting Sql Server to Core Framework.
