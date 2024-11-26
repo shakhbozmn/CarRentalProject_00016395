@@ -4,16 +4,18 @@ using CarRentalSystem_00016395.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace CarRentalSystem_00016395.Data.Migrations
 {
-    [DbContext(typeof(CRDbContext))]
-    partial class CRDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(CRDbContext_16395))]
+    [Migration("20241126072236_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +24,7 @@ namespace CarRentalSystem_00016395.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("CarRentalSystem_00016395.Models.Car", b =>
+            modelBuilder.Entity("CarRentalSystem_00016395.Models.Car_16395", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +47,7 @@ namespace CarRentalSystem_00016395.Data.Migrations
                     b.ToTable("Cars");
                 });
 
-            modelBuilder.Entity("CarRentalSystem_00016395.Models.Customer", b =>
+            modelBuilder.Entity("CarRentalSystem_00016395.Models.Customer_16395", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -70,7 +72,7 @@ namespace CarRentalSystem_00016395.Data.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("CarRentalSystem_00016395.Models.Rental", b =>
+            modelBuilder.Entity("CarRentalSystem_00016395.Models.Rental_16395", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,15 +101,15 @@ namespace CarRentalSystem_00016395.Data.Migrations
                     b.ToTable("Rentals");
                 });
 
-            modelBuilder.Entity("CarRentalSystem_00016395.Models.Rental", b =>
+            modelBuilder.Entity("CarRentalSystem_00016395.Models.Rental_16395", b =>
                 {
-                    b.HasOne("CarRentalSystem_00016395.Models.Car", "Car")
+                    b.HasOne("CarRentalSystem_00016395.Models.Car_16395", "Car")
                         .WithMany()
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CarRentalSystem_00016395.Models.Customer", "Customer")
+                    b.HasOne("CarRentalSystem_00016395.Models.Customer_16395", "Customer")
                         .WithMany()
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)

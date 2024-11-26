@@ -1,9 +1,8 @@
-/// ### Student: 00016395
-
+// ### Student: 00016395
 
 namespace CarRentalSystem_00016395.Models;
 
-public class Customer
+public class Customer_16395
 {
     public int Id { get; set; } 
     public string Name { get; set; } 
