@@ -1,6 +1,9 @@
 <div class="cars-wrapper">
     <div class="container">
-        <h2>Available Cars</h2>
+        <div class="flex flex-row justify-between items-center">
+            <h2>Available Cars</h2>
+            <a class="btn btn-success" (click)="addCar()">Add Car</a>
+        </div>
         <table class="table">
             <thead>
                 <tr>
@@ -15,7 +18,8 @@
                     <td>{{ car.year }}</td>
                     <td>{{ car.rentalPricePerDay }}</td>
                     <td>
-                        <a class="btn btn-primary" (click)="EditCar(car.id)">Edit</a>
+                        <a class="btn btn-primary mr-2" (click)="editCar(car)">Edit</a>
+                        <a class="btn btn-danger" (click)="deleteCar(car)">Delete</a>
                     </td>
                 </tr>
             </tbody>

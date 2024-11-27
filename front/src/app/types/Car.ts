@@ -1,7 +1,7 @@
 export interface Car {
     id: number;
     model: string;
-    year: number;
-    rentalPricePerDay: number;
+    year: number | null;
+    rentalPricePerDay: number | null;
   }
   

@@ -22,7 +22,17 @@ export class CarListComponent {
     });
   }
 
-  EditCar(id: number) {
-    this.router.navigate(['/edit-car', id]);
+  addCar() {
+    this.router.navigate(['/cars/new']);
+  }
+
+  editCar(car: Car) {
+    this.router.navigate(['/cars', car.id]);
+  }
+
+  deleteCar(car: Car) {
+    this.carService.deleteCar(car.id).subscribe(() => {
+      this.cars = this.cars.filter((c) => c.id !== car.id);
+    });
   }
 }
