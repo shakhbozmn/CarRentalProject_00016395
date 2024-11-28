@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Car } from '../../../types/Car';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CarService } from '../../../services/car/car.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'car-edit',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.scss'
 })

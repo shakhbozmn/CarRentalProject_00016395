@@ -1,0 +1,26 @@
+.modal.fade {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal.fade.show {
+    opacity: 1;
+}
+
+.modal-backdrop {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+.modal-dialog {
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: scale(1);
+}

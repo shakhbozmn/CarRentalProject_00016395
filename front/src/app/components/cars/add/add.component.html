@@ -2,7 +2,21 @@
     <div class="car-form-container py-5">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2>Add New Car</h2>
+                <div class="flex flex-col gap-3 items-start">
+                    <a [routerLink]="['/cars']" class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 24 24">
+                            <path d="M9.929 12L14.5 7.429 13 5.929 6.929 12 13 18.071 14.5 16.571z"></path>
+                        </svg>
+                        <p
+                            class="text-lg font-semibold text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                            Back
+                        </p>
+                    </a>
+                    <h2>
+                        Add New Car
+                    </h2>
+                </div>
             </div>
             <form #carForm="ngForm" (ngSubmit)="onSubmit()" class="bg-light p-4 rounded shadow-sm">
                 <div class="form-group mb-4">

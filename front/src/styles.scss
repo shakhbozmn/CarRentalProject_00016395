@@ -12,3 +12,10 @@
 .cr-body-wrapper {
     height: 100vh;
 }
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 900;
+    margin: 0;
+}

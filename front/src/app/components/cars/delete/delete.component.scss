@@ -1,27 +1,24 @@
-/* Modal fade-in animation */
 .modal.fade {
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in and fade-out effect */
+    transition: opacity 0.3s ease-in-out;
 }
 
 .modal.fade.show {
     opacity: 1;
 }
 
-/* Backdrop fade-in animation */
 .modal-backdrop {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
 .modal-backdrop.show {
-    opacity: 0.5; /* Semi-transparent backdrop */
+    opacity: 0.5;
 }
 
-/* Zoom-in animation for modal content */
 .modal-dialog {
     transform: scale(0.9);
-    transition: transform 0.3s ease-in-out; /* Zoom-in effect */
+    transition: transform 0.3s ease-in-out;
 }
 
 .modal.fade.show .modal-dialog {
