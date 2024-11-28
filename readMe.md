@@ -48,27 +48,40 @@ The frontend is built with **Angular** and organized to manage client-side behav
 
 To run this project, ensure the following tools and environments are set up on your machine:
 
-**Global Requirements:**
-• Node.js (v18 or higher)
-• Angular CLI (v18 or higher)
-• Docker
-• Visual Studio (for Windows users) or Visual Studio Code for cross-platform development.
-• SQL Server (if not on macOS).
+#### **Global Requirements:**
 
-**Backend Requirements:**
-• .NET SDK (6.0 or higher).
-• Entity Framework Core tools (dotnet-ef).
-• If your machine is on macOS it would be better to open the project with **JetBrains Rider**
+- **Node.js** (v18 or higher): Required to run the Angular development environment.
+- **Angular CLI** (v18 or higher): A command-line interface for Angular projects.
+  - Verify Angular CLI installation with:
+    ```bash
+    ng version
+    ```
+- **Docker**: Used to run SQL Server on macOS and other containerized environments.
+- **Visual Studio** (for Windows users) or **Visual Studio Code** (cross-platform): Recommended IDEs for development.
+- **SQL Server**: Required for database operations. Use Docker to set up SQL Server on macOS.
 
-**Frontend Requirements:**
-• Angular installed globally
-You can check by running:
+#### **Backend Requirements:**
 
-```bash
-            ng -v
-```
+- **.NET SDK** (6.0 or higher): Required to build and run the ASP.NET Core backend.
+- **Entity Framework Core Tools** (`dotnet-ef`): Used for managing database migrations.
+  - Install Entity Framework tools with:
+    ```bash
+    dotnet tool install --global dotnet-ef
+    ```
+- **JetBrains Rider** (Optional for macOS users): A robust IDE for developing ASP.NET Core applications.
 
-• Any Browser
+#### **Frontend Requirements:**
+
+- **Angular Installed Globally**: Angular must be installed on your system to manage the frontend.
+  - Check if Angular is installed:
+    ```bash
+    ng version
+    ```
+  - If not installed, install Angular CLI:
+    ```bash
+    npm install -g @angular/cli
+    ```
+- **Any Modern Browser**: Recommended browsers include Google Chrome, Mozilla Firefox, or Microsoft Edge.
 
 ## Step-by-Step Guide to Run the Project
 
