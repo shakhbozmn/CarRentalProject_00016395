@@ -42,6 +42,141 @@ The frontend is built with **Angular** and organized to manage client-side behav
 - **Public Assets**: Houses static files like images, fonts, and other assets.
 - **Configuration**: Contains configuration files for Angular, Tailwind CSS, and TypeScript.
 
+## How to Open and Run the Project
+
+### Prerequisites
+
+To run this project, ensure the following tools and environments are set up on your machine:
+
+**Global Requirements:**
+
+    •   Node.js (v18 or higher)
+    •	Angular CLI (v18 or higher)
+    •	Docker
+    •	Visual Studio (for Windows users) or Visual Studio Code for cross-platform development.
+    •	SQL Server (if not on macOS).
+
+**Backend Requirements:**
+
+    •   .NET SDK (6.0 or higher).
+    •	Entity Framework Core tools (dotnet-ef).
+    •   If your machine is on macOS it would be better to open the project with **JetBrains Rider**
+
+**Frontend Requirements:**
+
+    •   Angular installed globally
+        You can check by running:
+        ```bash
+            ng -v
+        ```
+    •   Any Browser
+
+## Step-by-Step Guide to Run the Project
+
+### Running the Backend
+
+The backend is built using ASP.Net Core and can be run on any compatible system. For macOS users, since SQL Server is unavailable natively, Docker is utilized to set up a SQL Server instance. Follow the steps below to configure and run the backend:
+
+#### Setting Up SQL Server on macOS using Docker:
+
+**1. Install Docker:** If not already installed, download and install Docker from Docker's official site.
+**2. Pull SQL Server Image:**
+
+```bash
+docker pull mcr.microsoft.com/mssql/server:2022-latest
+```
+
+**3. Run SQL Server Container:**
+
+```bash
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrongPassword123!' -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
+```
+
+Replace YourStrongPassword123! with a strong password of your choice. This will create and run an SQL Server instance on port 1433.
+
+**4. Verify SQL Server Container: To check if the container is running:**
+
+```bash
+docker ps
+```
+
+**5. Connect to SQL Server:** Use a SQL client like Azure Data Studio or any supported tool to connect to localhost:1433. Use the following credentials:
+**• Username:** `sa`
+**• Password:** Your defined password.
+
+#### Configuring the Backend
+
+**1. Clone the Repository:**
+
+```bash
+git clone https://github.com/shakhbozmn/CarRentalProject.git
+```
+
+**2. Navigate to the Backend Directory:**
+
+```bash
+cd CarRentalProject/back
+```
+
+**3. Restore NuGet Packages:**
+
+```bash
+dotnet restore
+```
+
+**4. Update Connection String:** Update the connection string in the `appsettings.json` file to match your SQL Server configuration. For Docker users:
+
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=localhost,1433;Database=CarRentalSystem_00016395;User=sa;Password=YourStrongPassword123!;"
+}
+```
+
+**5. Apply Database Migrations:**
+
+```bash
+dotnet ef migrations add InitialMigrations --output-dit Data/Migrations
+```
+
+and
+
+```bash
+dotnet ef database update
+```
+
+**6. Run Backend**
+
+```bash
+dotnet run
+```
+
+The backend will be available at `https://localhost:7167/swagger/index.html`
+
+### Running the Frontend:
+
+The frontend is built using Angular. Follow the steps below to set it up and run:
+
+**1. Navigate to the Frontend Directory:**
+
+```bash
+cd CarRentalProject/front
+```
+
+**2. Install Dependencies:**
+
+```bash
+npm install
+
+```
+
+**3. Run the Frontend:**
+
+```bash
+ng serve
+```
+
+By default, the frontend will run at `http://localhost:4200` Ensure the backend is running for the frontend to function correctly.
+
 ## Reference
 
 ### Packages and Libraries Used
