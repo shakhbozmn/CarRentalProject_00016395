@@ -18,28 +18,53 @@ public class Rental16395Repository : IRental16395Repository
     public async Task<IEnumerable<Rental_16395>> GetAllRentalsAsync()
     {
         return await _context.Rentals
-            .Include(r => r.Car)
+            .Include(r => r.Car)      // Include Car details
+            .Include(r => r.Customer) // Include Customer details
             .ToListAsync();
     }
-    
+
     public async Task<Rental_16395> GetRentalByIdAsync(int id)
     {
         return await _context.Rentals
-            .Include(r => r.Car)
+            .Include(r => r.Car)      // Include Car details
+            .Include(r => r.Customer) // Include Customer details
             .FirstOrDefaultAsync(r => r.Id == id);
     }
+
     
-    public async Task AddRentalAsync(Rental_16395 rental, Customer_16395 customer)
+    public async Task AddRentalAsync(Rental_16395 rental)
     {
-        if (customer != null)
+        var existingCar = await _context.Cars.FindAsync(rental.CarId);
+        if (existingCar == null)
         {
-            _context.Customers.Add(customer);
-            rental.Customer = customer; 
+            throw new Exception("Car not found");
+        }
+
+        if (rental.Customer != null)
+        {
+            var existingCustomer = await _context.Customers
+                .FirstOrDefaultAsync(c => c.Email == rental.Customer.Email);
+
+            if (existingCustomer != null)
+            {
+                rental.CustomerId = existingCustomer.Id; 
+            }
+            else
+            {
+                _context.Customers.Add(rental.Customer); 
+                await _context.SaveChangesAsync(); 
+                rental.CustomerId = rental.Customer.Id; 
+            }
+        }
+        else
+        {
+            throw new Exception("Customer data is required.");
         }
 
         _context.Rentals.Add(rental);
         await _context.SaveChangesAsync();
     }
+
 
     
     public async Task UpdateRentalAsync(Rental_16395 rental)

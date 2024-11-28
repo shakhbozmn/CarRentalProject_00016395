@@ -31,7 +31,7 @@ export class RentalFormComponent implements OnInit {
     this.carService.getCars().subscribe(
       (data: Car[]) => {
         this.cars = data; 
-        console.log('Cars fetched successfully:', this.cars); // Debugging log
+        console.log('Cars fetched successfully:', this.cars); 
       },
       (error) => {
         console.error('Error fetching cars:', error);
@@ -40,12 +40,18 @@ export class RentalFormComponent implements OnInit {
   }
 
   onSubmit(): void {
+    const selectedCar = this.cars.find((c) => c.id === Number(this.rental.carId)); 
     const payload: Rental = {
-      ...this.rental,
-      car: this.cars.find((c) => c.id === this.rental.carId) || { id: 0, model: '', year: 0, rentalPricePerDay: 0 },
-      customer: this.rental.customer
+      id: this.rental.id, 
+      carId: this.rental.carId, 
+      customer: this.rental.customer, 
+      rentalDate: this.rental.rentalDate,
+      returnDate: this.rental.returnDate
     };
-
+  
+  
+    console.log('Creating rental:', payload);
+  
     this.rentalService.addRental(payload).subscribe(
       (response) => {
         console.log('Rental successfully created:', response);
@@ -57,4 +63,5 @@ export class RentalFormComponent implements OnInit {
       }
     );
   }
+  
 }

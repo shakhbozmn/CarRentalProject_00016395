@@ -49,16 +49,13 @@ public class RentalController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Rental_16395>> CreateRental([FromBody] Rental_16395 rental)
     {
-        if (rental.Customer != null)
+        if (rental == null)
         {
-            await _rentalRepository.AddRentalAsync(rental, rental.Customer);
-        }
-        else
-        {
-            return  BadRequest();
+            return BadRequest("Rental data is required.");
         }
 
-        return CreatedAtAction("GetRental", new { id = rental.Id }, rental);
+        await _rentalRepository.AddRentalAsync(rental);
+        return CreatedAtAction(nameof(GetRental), new { id = rental.Id }, rental);
     }
 
     [HttpPut("{id}")]

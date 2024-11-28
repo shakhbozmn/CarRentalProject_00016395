@@ -7,7 +7,7 @@ import { Rental } from '../../types/Rental';
   providedIn: 'root',
 })
 export class RentalService {
-  private apiUrl = 'https://localhost:7167/api/Rental'; // Update to match your API
+  private apiUrl = 'https://localhost:7167/api/Rental'; 
 
   constructor(private http: HttpClient) {}
 
