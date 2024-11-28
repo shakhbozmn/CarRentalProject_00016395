@@ -26,7 +26,7 @@
   align-items: center;
 }
 .home-wrapper h1 {
-  font-size: clamp(3rem, 5vw, 10rem);
+  font-size: clamp(24px, 5vw, 80px);
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
