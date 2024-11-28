@@ -1,40 +1,44 @@
-<div class="container">
-    <h2>
-        Rent Details for {{ rental.customer.name }}
-    </h2>
-    <form>
-        <div class="form-group">
-            <label for="car">Select Car</label>
-            <select class="form-control" id="car" [(ngModel)]="rental.carId" name="carId" required>
-                <option *ngFor="let car of cars" [value]="car.id">
-                    {{ car.model }} ({{ car.year }})
-                </option>
-            </select>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <h2 class="text-primary text-center mb-4">
+                Rent Details for {{ rental.customer.name }}
+            </h2>
+            <form class="bg-light p-4 rounded shadow-sm">
+                <div class="form-group mb-3">
+                    <label for="car" class="form-label">Select Car</label>
+                    <select class="form-control" id="car" [(ngModel)]="rental.carId" name="carId" disabled>
+                        <option *ngFor="let car of cars" [value]="car.id">
+                            {{ car.model }} ({{ car.year }})
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="customerName" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="customerName" [(ngModel)]="rental.customer.name"
+                        name="customerName" disabled />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="customerEmail" class="form-label">Customer Email</label>
+                    <input type="email" class="form-control" id="customerEmail" [(ngModel)]="rental.customer.email"
+                        name="customerEmail" disabled />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="customerPhone" class="form-label">Customer Phone Number</label>
+                    <input type="tel" class="form-control" id="customerPhone" [(ngModel)]="rental.customer.phoneNumber"
+                        name="customerPhone" disabled />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="rentalDate" class="form-label">Rental Date</label>
+                    <input type="date" class="form-control" id="rentalDate" [(ngModel)]="rental.rentalDate"
+                        name="rentalDate" disabled />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="returnDate" class="form-label">Return Date</label>
+                    <input type="date" class="form-control" id="returnDate" [(ngModel)]="rental.returnDate"
+                        name="returnDate" disabled />
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="customerName">Customer Name</label>
-            <input type="text" class="form-control" id="customerName" [(ngModel)]="rental.customer.name"
-                name="customerName" required />
-        </div>
-        <div class="form-group">
-            <label for="customerEmail">Customer Email</label>
-            <input type="email" class="form-control" id="customerEmail" [(ngModel)]="rental.customer.email"
-                name="customerEmail" required />
-        </div>
-        <div class="form-group">
-            <label for="customerPhone">Customer Phone Number</label>
-            <input type="tel" class="form-control" id="customerPhone" [(ngModel)]="rental.customer.phoneNumber"
-                name="customerPhone" required />
-        </div>
-        <div class="form-group">
-            <label for="rentalDate">Rental Date</label>
-            <input type="date" class="form-control" id="rentalDate" [(ngModel)]="rental.rentalDate" name="rentalDate"
-                required />
-        </div>
-        <div class="form-group">
-            <label for="returnDate">Return Date</label>
-            <input type="date" class="form-control" id="returnDate" [(ngModel)]="rental.returnDate" name="returnDate"
-                required />
-        </div>
-    </form>
+    </div>
 </div>

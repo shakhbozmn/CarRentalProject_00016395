@@ -13,6 +13,6 @@ export class HomeComponent {
   router = inject(Router);
   RentClick() {
     console.log('Rent Clicked');
-    this.router.navigate(['rent']);
+    this.router.navigate(['rent/new']);
   }
 }
