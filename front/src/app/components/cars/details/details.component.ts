@@ -5,13 +5,13 @@ import { CarService } from '../../../services/car/car.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-details',
+  selector: 'car-details',
   standalone: true,
   imports: [FormsModule],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
-export class DetailsComponent {
+export class CarDetailsComponent {
   car: Car = {
     id: 0,
     year: null,

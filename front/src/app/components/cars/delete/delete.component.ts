@@ -1,14 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Car } from '../../../types/Car';
 
 @Component({
-  selector: 'app-delete',
+  selector: 'car-delete',
   standalone: true,
   imports: [],
   templateUrl: './delete.component.html',
   styleUrl: './delete.component.scss'
 })
-export class DeleteComponent {
+export class CarDeleteComponent {
   @Input() car!: Car;
 
   @Output() onDeleteConfirmed = new EventEmitter<void>();

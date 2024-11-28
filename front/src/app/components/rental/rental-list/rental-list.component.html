@@ -1,0 +1,48 @@
+<div class="rental-wrapper py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Rents</h2>
+            <button class="btn btn-success" (click)="addRental()">Create New</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Rental Model</th>
+                        <th>Customer Name</th>
+                        <th>Customer Email</th>
+                        <th>Rental Date</th>
+                        <th>Return Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let rental of rentals">
+                        <td>{{ rental?.car?.model }}</td>
+                        <td>{{ rental.customer.name }}</td>
+                        <td>{{ rental.customer.email }}</td>
+                        <td>{{ rental.rentalDate | date: 'dd/MM/yyyy' }}</td>
+                        <td>{{ rental.returnDate | date: 'dd/MM/yyyy' }}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm mr-2" (click)="editRental(rental)">Edit</button>
+                            <button class="btn btn-info btn-sm mr-2"
+                                (click)="viewRentalDetails(rental)">Details</button>
+                            <button class="btn btn-danger btn-sm" (click)="openDeleteModal(rental)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="rentals.length === 0 && !loading" class="alert alert-warning text-center">
+            No rentals available
+        </div>
+        <div *ngIf="loading" class="text-center mt-4">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <rental-delete *ngIf="selectedRental" [rental]="selectedRental" (onDeleteConfirmed)="handleDeleteConfirmed()"
+        (onCancel)="handleDeleteCancelled()" class="mt-3">
+    </rental-delete>
+</div>

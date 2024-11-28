@@ -18,16 +18,16 @@ public class Rental16395Repository : IRental16395Repository
     public async Task<IEnumerable<Rental_16395>> GetAllRentalsAsync()
     {
         return await _context.Rentals
-            .Include(r => r.Car)      // Include Car details
-            .Include(r => r.Customer) // Include Customer details
+            .Include(r => r.Car)     
+            .Include(r => r.Customer)
             .ToListAsync();
     }
 
     public async Task<Rental_16395> GetRentalByIdAsync(int id)
     {
         return await _context.Rentals
-            .Include(r => r.Car)      // Include Car details
-            .Include(r => r.Customer) // Include Customer details
+            .Include(r => r.Car)     
+            .Include(r => r.Customer)
             .FirstOrDefaultAsync(r => r.Id == id);
     }
 
@@ -64,13 +64,58 @@ public class Rental16395Repository : IRental16395Repository
         _context.Rentals.Add(rental);
         await _context.SaveChangesAsync();
     }
-
-
     
     public async Task UpdateRentalAsync(Rental_16395 rental)
     {
+        if (rental.CustomerId == 0 && rental.Customer != null)
+        {
+            rental.CustomerId = rental.Customer.Id;
+        }
+
+        if (rental.Customer != null)
+        {
+            var existingCustomer = await _context.Customers.FindAsync(rental.Customer.Id);
+            if (existingCustomer != null)
+            {
+                _context.Entry(existingCustomer).CurrentValues.SetValues(rental.Customer);
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Customer with ID {rental.Customer.Id} does not exist.");
+            }
+        }
+
+        if (rental.Car != null)
+        {
+            var existingCar = await _context.Cars.FindAsync(rental.Car.Id);
+            if (existingCar != null)
+            {
+                _context.Entry(existingCar).CurrentValues.SetValues(rental.Car);
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Car with ID {rental.Car.Id} does not exist.");
+            }
+        }
+
         _context.Entry(rental).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
+
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateException ex) // for dbcontext debugging
+        {
+            if (ex.InnerException != null && ex.InnerException.Message.Contains("FK_Rentals_Customers_CustomerId"))
+            {
+                throw new DbUpdateException("Foreign key violation: Invalid CustomerId.", ex);
+            }
+            else if (ex.InnerException != null && ex.InnerException.Message.Contains("FK_Rentals_Cars_CarId"))
+            {
+                throw new DbUpdateException("Foreign key violation: Invalid CarId.", ex);
+            }
+            throw;
+        }
     }
     
     public async Task DeleteRentalAsync(int id)

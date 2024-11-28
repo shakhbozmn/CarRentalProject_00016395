@@ -1,19 +1,20 @@
-import { Component, OnInit} from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Rental } from '../../../types/Rental';
 import { RentalService } from '../../../services/rental/rental.service';
-import { FormsModule } from '@angular/forms';
 import { CarService } from '../../../services/car/car.service';
 import { Car } from '../../../types/Car';
-import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-rental-form',
+  selector: 'rental-add',
   standalone: true,
-  imports: [ FormsModule, CommonModule ],
-  templateUrl: './rental-form.component.html',
-  styleUrl: './rental-form.component.scss'
+  imports: [FormsModule, CommonModule],
+  templateUrl: './add.component.html',
+  styleUrl: './add.component.scss'
 })
-export class RentalFormComponent implements OnInit {
+export class RentalAddComponent implements OnInit {
   rental: Rental = {
     id: 0,
     carId: 0,
@@ -25,7 +26,9 @@ export class RentalFormComponent implements OnInit {
 
   cars: Car[] = []; 
 
-  constructor(private rentalService: RentalService, private carService: CarService) {}
+  rentalService = inject(RentalService);
+  carService = inject(CarService);
+  router = inject(Router);
 
   ngOnInit(): void {
     this.carService.getCars().subscribe(
@@ -56,6 +59,7 @@ export class RentalFormComponent implements OnInit {
       (response) => {
         console.log('Rental successfully created:', response);
         alert('Rental successfully created!');
+        this.router.navigate(['/rents']);
       },
       (error) => {
         console.error('Error creating rental:', error);
@@ -63,5 +67,4 @@ export class RentalFormComponent implements OnInit {
       }
     );
   }
-  
 }

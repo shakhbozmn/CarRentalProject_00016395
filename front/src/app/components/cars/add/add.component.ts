@@ -6,13 +6,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CarService } from '../../../services/car/car.service';
 
 @Component({
-  selector: 'app-add',
+  selector: 'car-add',
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './add.component.html',
   styleUrl: './add.component.scss'
 })
-export class AddComponent {
+export class CarAddComponent {
   route = inject(ActivatedRoute);
   router = inject(Router);
   carService = inject(CarService);

@@ -1,0 +1,29 @@
+/* Modal fade-in animation */
+.modal.fade {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in and fade-out effect */
+}
+
+.modal.fade.show {
+  opacity: 1;
+}
+
+/* Backdrop fade-in animation */
+.modal-backdrop {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5; /* Semi-transparent backdrop */
+}
+
+/* Zoom-in animation for modal content */
+.modal-dialog {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out; /* Zoom-in effect */
+}
+
+.modal.fade.show .modal-dialog {
+  transform: scale(1);
+}/*# sourceMappingURL=delete.component.css.map */

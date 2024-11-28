@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg cr-nav">
     <div class="container">
-        <a class="brand" href="/">
+        <a class="brand" (click)="homeClick()">
             <div class="flex flex-row items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
                     <path
@@ -12,8 +12,11 @@
         </a>
         <div class="cr-btn-row">
             <div class="flex flex-row gap-3">
-                <a class="btn btn-secondary" (click)="SeeAllClick()">See Cars</a>
-                <a class="btn btn-primary" (click)="RentClick()">Rent a Car</a>
+                <a class="btn btn-secondary" (click)="seeRentsClick()">
+                    Rents
+                </a>
+                <a class="btn btn-secondary" (click)="seeAllCarsClick()">Cars</a>
+                <a class="btn btn-primary" (click)="addRentClick()">Rent a Car</a>
             </div>
         </div>
     </div>

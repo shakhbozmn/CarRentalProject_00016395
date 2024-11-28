@@ -6,13 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-edit',
+  selector: 'car-edit',
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.scss'
 })
-export class EditComponent implements OnInit {
+export class CarEditComponent implements OnInit {
   car: Car = {
     id: 0,
     year: null,

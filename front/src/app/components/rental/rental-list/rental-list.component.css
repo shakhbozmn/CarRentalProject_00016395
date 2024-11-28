@@ -1,0 +1,9 @@
+.rental-wrapper {
+  padding: 40px 0;
+}
+.rental-wrapper h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(24px, 5vw, 36px);
+  font-weight: 900;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=rental-list.component.css.map */

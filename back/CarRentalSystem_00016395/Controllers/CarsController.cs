@@ -1,11 +1,9 @@
 // ### Student: 00016395
 
 
-using CarRentalSystem_00016395.Data;
 using CarRentalSystem_00016395.Models;
 using CarRentalSystem_00016395.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace CarRentalSystem_00016395.Controllers;
 

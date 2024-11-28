@@ -1,7 +1,6 @@
 // ### Student: 00016395
 
 
-using CarRentalSystem_00016395.Data;
 using CarRentalSystem_00016395.Models;
 using CarRentalSystem_00016395.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -63,10 +62,26 @@ public class RentalController : ControllerBase
     {
         if (id != rental.Id)
         {
-            return BadRequest();
+            return BadRequest("Rental ID mismatch.");
         }
-        await _rentalRepository.UpdateRentalAsync(rental);
-        return NoContent();
+
+        try
+        {
+            await _rentalRepository.UpdateRentalAsync(rental);
+            return NoContent();
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
+        catch (DbUpdateException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the rental.");
+        }
     }
     
     [HttpDelete("{id}")]

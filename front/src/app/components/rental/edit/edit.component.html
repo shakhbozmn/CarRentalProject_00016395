@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Edit Rental</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="car">Select Car</label>
+            <select class="form-control" id="car" [(ngModel)]="rental.carId" name="carId" required>
+                <option *ngFor="let car of cars" [value]="car.id">
+                    {{ car.model }} ({{ car.year }})
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="customerName">Customer Name</label>
+            <input type="text" class="form-control" id="customerName" [(ngModel)]="rental.customer.name"
+                name="customerName" required />
+        </div>
+        <div class="form-group">
+            <label for="customerEmail">Customer Email</label>
+            <input type="email" class="form-control" id="customerEmail" [(ngModel)]="rental.customer.email"
+                name="customerEmail" required />
+        </div>
+        <div class="form-group">
+            <label for="customerPhone">Customer Phone Number</label>
+            <input type="tel" class="form-control" id="customerPhone" [(ngModel)]="rental.customer.phoneNumber"
+                name="customerPhone" required />
+        </div>
+        <div class="form-group">
+            <label for="rentalDate">Rental Date</label>
+            <input type="date" class="form-control" id="rentalDate" [(ngModel)]="rental.rentalDate" name="rentalDate"
+                required />
+        </div>
+        <div class="form-group">
+            <label for="returnDate">Return Date</label>
+            <input type="date" class="form-control" id="returnDate" [(ngModel)]="rental.returnDate" name="returnDate"
+                required />
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

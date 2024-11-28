@@ -1,40 +1,45 @@
-<div class="cars-wrapper">
+<div class="cars-wrapper py-5">
     <div class="container">
-        <div class="flex flex-row justify-between items-center">
+        <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Available Cars</h2>
-            <a class="btn btn-success" (click)="addCar()">Add Car</a>
+            <button class="btn btn-success" (click)="addCar()">Add Car</button>
         </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Model</th>
-                    <th>Year</th>
-                    <th>Rental Price (per day)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let car of cars">
-                    <td>{{ car.model }}</td>
-                    <td>{{ car.year }}</td>
-                    <td>{{ car.rentalPricePerDay }}</td>
-                    <td>
-                        <a class="btn btn-primary mr-2" (click)="editCar(car)">Edit</a>
-                        <a class="btn btn-info mr-2" (click)="viewCarDetails(car)">
-                            Details
-                        </a>
-                        <a class="btn btn-danger" (click)="openDeleteModal(car)">Delete</a>
-                    </td>
-                </tr>
-            </tbody>
-            <div *ngIf="cars.length === 0">No cars available</div>
-            <div *ngIf="loading" class="spinner" role="status">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Rental Price (per day)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let car of cars">
+                        <td>{{ car.model }}</td>
+                        <td>{{ car.year }}</td>
+                        <td>{{ car.rentalPricePerDay | currency }}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm mr-2" (click)="editCar(car)">Edit</button>
+                            <button class="btn btn-info btn-sm mr-2" (click)="viewCarDetails(car)">
+                                Details
+                            </button>
+                            <button class="btn btn-danger btn-sm" (click)="openDeleteModal(car)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="cars.length === 0 && !loading" class="alert alert-warning text-center">
+            No cars available
+        </div>
+        <div *ngIf="loading" class="text-center mt-4">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
-        </table>
+        </div>
     </div>
-    <app-delete *ngIf="selectedCar" [car]="selectedCar" (onDeleteConfirmed)="handleDeleteConfirmed()"
-        (onCancel)="handleDeleteCancelled()">
-    </app-delete>
+    <car-delete *ngIf="selectedCar" [car]="selectedCar" (onDeleteConfirmed)="handleDeleteConfirmed()"
+        (onCancel)="handleDeleteCancelled()" class="mt-3">
+    </car-delete>
 </div>

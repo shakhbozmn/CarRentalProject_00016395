@@ -3,16 +3,17 @@ import { Car } from '../../../types/Car';
 import { CarService } from '../../../services/car/car.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { DeleteComponent } from '../delete/delete.component';
+import { CarDeleteComponent } from '../delete/delete.component';
 
 @Component({
   selector: 'app-car-list',
   standalone: true,
-  imports: [CommonModule, DeleteComponent],
+  imports: [CommonModule, CarDeleteComponent],
   templateUrl: './car-list.component.html',
   styleUrls: ['./car-list.component.scss'], 
 })
 export class CarListComponent {
+
   carService = inject(CarService);
   router = inject(Router);
 
