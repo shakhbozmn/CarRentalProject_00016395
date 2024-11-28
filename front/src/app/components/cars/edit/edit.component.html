@@ -1,0 +1,25 @@
+<div class="car-form-container">
+    <div class="container">
+        <h2>Edit Car</h2>
+        <form #carForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group mb-4">
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" class="form-control" required [(ngModel)]="car.year" />
+            </div>
+            <div class="form-group mb-4">
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model" class="form-control" required [(ngModel)]="car.model" />
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="rentalPricePerDay">Rental Price Per Day:</label>
+                <input type="number" id="rentalPricePerDay" name="rentalPricePerDay" class="form-control" required
+                    [(ngModel)]="car.rentalPricePerDay" />
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="!carForm.valid">
+                Update Car
+            </button>
+        </form>
+    </div>
+</div>

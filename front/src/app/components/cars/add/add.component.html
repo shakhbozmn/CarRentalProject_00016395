@@ -1,6 +1,6 @@
 <div class="car-form-container">
     <div class="container">
-        <h2>{{ isEditMode ? 'Edit Car' : 'Add New Car' }}</h2>
+        <h2>Add New Car</h2>
         <form #carForm="ngForm" (ngSubmit)="onSubmit()">
             <div class="form-group mb-4">
                 <label for="year">Year:</label>
@@ -18,7 +18,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary" [disabled]="!carForm.valid">
-                {{ isEditMode ? 'Update Car' : 'Add Car' }}
+                Add Car
             </button>
         </form>
     </div>

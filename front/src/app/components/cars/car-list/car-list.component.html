@@ -19,10 +19,22 @@
                     <td>{{ car.rentalPricePerDay }}</td>
                     <td>
                         <a class="btn btn-primary mr-2" (click)="editCar(car)">Edit</a>
-                        <a class="btn btn-danger" (click)="deleteCar(car)">Delete</a>
+                        <a class="btn btn-info mr-2" (click)="viewCarDetails(car)">
+                            Details
+                        </a>
+                        <a class="btn btn-danger" (click)="openDeleteModal(car)">Delete</a>
                     </td>
                 </tr>
             </tbody>
+            <div *ngIf="cars.length === 0">No cars available</div>
+            <div *ngIf="loading" class="spinner" role="status">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
         </table>
     </div>
+    <app-delete *ngIf="selectedCar" [car]="selectedCar" (onDeleteConfirmed)="handleDeleteConfirmed()"
+        (onCancel)="handleDeleteCancelled()">
+    </app-delete>
 </div>
