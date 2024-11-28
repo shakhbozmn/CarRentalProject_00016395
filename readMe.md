@@ -49,27 +49,26 @@ The frontend is built with **Angular** and organized to manage client-side behav
 To run this project, ensure the following tools and environments are set up on your machine:
 
 **Global Requirements:**
-
-    •   Node.js (v18 or higher)
-    •	Angular CLI (v18 or higher)
-    •	Docker
-    •	Visual Studio (for Windows users) or Visual Studio Code for cross-platform development.
-    •	SQL Server (if not on macOS).
+• Node.js (v18 or higher)
+• Angular CLI (v18 or higher)
+• Docker
+• Visual Studio (for Windows users) or Visual Studio Code for cross-platform development.
+• SQL Server (if not on macOS).
 
 **Backend Requirements:**
-
-    •   .NET SDK (6.0 or higher).
-    •	Entity Framework Core tools (dotnet-ef).
-    •   If your machine is on macOS it would be better to open the project with **JetBrains Rider**
+• .NET SDK (6.0 or higher).
+• Entity Framework Core tools (dotnet-ef).
+• If your machine is on macOS it would be better to open the project with **JetBrains Rider**
 
 **Frontend Requirements:**
+• Angular installed globally
+You can check by running:
 
-    •   Angular installed globally
-        You can check by running:
-        ```bash
+```bash
             ng -v
-        ```
-    •   Any Browser
+```
+
+• Any Browser
 
 ## Step-by-Step Guide to Run the Project
 
@@ -80,6 +79,7 @@ The backend is built using ASP.Net Core and can be run on any compatible system.
 #### Setting Up SQL Server on macOS using Docker:
 
 **1. Install Docker:** If not already installed, download and install Docker from Docker's official site.
+
 **2. Pull SQL Server Image:**
 
 ```bash
@@ -135,7 +135,7 @@ dotnet restore
 **5. Apply Database Migrations:**
 
 ```bash
-dotnet ef migrations add InitialMigrations --output-dit Data/Migrations
+dotnet ef migrations add InitialMigrations --output-dir Data/Migrations
 ```
 
 and
@@ -182,6 +182,16 @@ By default, the frontend will run at `http://localhost:4200` Ensure the backend 
 ### Packages and Libraries Used
 
 Below are the packages that have been utilized for the CarRentalSystem_00016395 backend, along with their purpose:
+
+#### Frontend (Angular)
+
+1. **Angular Material** - A UI component library that provides pre-built, customizable components for a consistent and modern user experience.
+2. **Tailwind CSS** - A utility-first CSS framework used for building custom designs efficiently with minimal CSS code.
+3. **Bootstrap** - A CSS framework that provides pre-styled components and grid systems to ensure responsive design.
+4. **RxJS** - A library for reactive programming used in Angular for handling asynchronous data streams.
+5. **Angular CLI** - A command-line tool used for managing Angular projects, generating components, and building the application.
+6. **TypeScript** - A typed superset of JavaScript that enhances code maintainability and readability.
+7. **Angular Forms** - Used to build and manage form controls in the application for both template-driven and reactive forms.
 
 #### Backend (ASP.NET Core)
 
