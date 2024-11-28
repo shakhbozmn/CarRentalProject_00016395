@@ -1,3 +1,5 @@
+// ### Student: 00016395
+
 using CarRentalSystem_00016395.Data;
 using CarRentalSystem_00016395.Models;
 using Microsoft.EntityFrameworkCore;
@@ -27,11 +29,18 @@ public class Rental16395Repository : IRental16395Repository
             .FirstOrDefaultAsync(r => r.Id == id);
     }
     
-    public async Task AddRentalAsync(Rental_16395 rental)
+    public async Task AddRentalAsync(Rental_16395 rental, Customer_16395 customer)
     {
+        if (customer != null)
+        {
+            _context.Customers.Add(customer);
+            rental.Customer = customer; 
+        }
+
         _context.Rentals.Add(rental);
         await _context.SaveChangesAsync();
     }
+
     
     public async Task UpdateRentalAsync(Rental_16395 rental)
     {

@@ -47,12 +47,20 @@ public class RentalController : ControllerBase
     }
     
     [HttpPost]
-    public async Task<ActionResult<Rental_16395>> CreateRental(Rental_16395 rental)
+    public async Task<ActionResult<Rental_16395>> CreateRental([FromBody] Rental_16395 rental)
     {
-        await _rentalRepository.AddRentalAsync(rental);
+        if (rental.Customer != null)
+        {
+            await _rentalRepository.AddRentalAsync(rental, rental.Customer);
+        }
+        else
+        {
+            return  BadRequest();
+        }
+
         return CreatedAtAction("GetRental", new { id = rental.Id }, rental);
     }
-    
+
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateRental(int id, Rental_16395 rental)
     {

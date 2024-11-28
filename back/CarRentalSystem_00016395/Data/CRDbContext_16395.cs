@@ -16,4 +16,19 @@ public class CRDbContext_16395 : DbContext
     public DbSet<Customer_16395> Customers { get; set; }
     
     public DbSet<Rental_16395> Rentals { get; set; }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Rental_16395>()
+            .HasOne(r => r.Customer)
+            .WithMany()
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Rental_16395>()
+            .HasOne(r => r.Car)
+            .WithMany()
+            .HasForeignKey(r => r.CarId)
+            .OnDelete(DeleteBehavior.Cascade);
+    }
+
 }
