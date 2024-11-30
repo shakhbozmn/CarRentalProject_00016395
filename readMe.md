@@ -64,11 +64,13 @@ To run this project, ensure the following tools and environments are set up on y
 
 - **.NET SDK** (6.0 or higher): Required to build and run the ASP.NET Core backend.
 - **Entity Framework Core Tools** (`dotnet-ef`): Used for managing database migrations.
+
   - Install Entity Framework tools with:
     ```bash
     dotnet tool install --global dotnet-ef
     ```
-- **JetBrains Rider** (Optional for macOS users): A robust IDE for developing ASP.NET Core applications.
+
+- **JetBrains Rider** (for macOS users): A robust IDE for developing ASP.NET Core applications or **Visual Studio** (for Windows users)
 
 #### **Frontend Requirements:**
 
@@ -102,10 +104,10 @@ docker pull mcr.microsoft.com/mssql/server:2022-latest
 **3. Run SQL Server Container:**
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrongPassword123!' -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=StrongPassword123!' -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
-Replace YourStrongPassword123! with a strong password of your choice. This will create and run an SQL Server instance on port 1433.
+Replace StrongPassword123! with a strong password of your choice. This will create and run an SQL Server instance on port 1433.
 
 **4. Verify SQL Server Container: To check if the container is running:**
 
