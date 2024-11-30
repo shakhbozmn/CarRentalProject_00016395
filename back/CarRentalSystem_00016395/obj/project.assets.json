@@ -2493,7 +2493,6 @@
       "packagesPath": "/Users/shakhboz/.nuget/packages/",
       "outputPath": "/Users/shakhboz/university docs/CarRentalProject_00016395/back/CarRentalSystem_00016395/obj/",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/Users/shakhboz/.nuget/NuGet/NuGet.Config"
       ],
@@ -2514,7 +2513,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net6.0": {
@@ -2558,7 +2563,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
